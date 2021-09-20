@@ -10,13 +10,13 @@
         
         
         <style>
-            .formLogin{
+           .formLogin{
                 width: 350px;
                 margin: 150px auto 0;
                 font-family: sans-serif;
             }
             .formLogin fieldset{
-                background: rgb(248, 248, 250);
+                background: rgb(255, 255, 255);
             }
             .formLogin legend{
                 background: white;
@@ -24,7 +24,7 @@
                 padding: 10px;
             }
             .formLogin label{
-                margin-top: 5px;
+                margin-top: 15px;
                 display: block;
                 margin-bottom: 5px;
             }
@@ -36,25 +36,46 @@
                 padding: 15px;
                 font-size: 18px;
                 border: none;
-            } 
+            }
+            #user, #pass{
+                background: #ddd;
+            }
+            #user:focus, #pass:focus{
+                background: white;
+            }
+            
+            .btn{
+                margin-top: 15px;
+            }
+            #user{
+                margin-bottom: 15px;
+            }
         
         </style>
 
     </head>
-    <body>
+    <body class="text-center">
         <h1>Exemplo de formulario</h1>
         
         <form action="#" method="POST" class=formLogin>
             <fieldset>
-                
-                <div class="form-floating mb-3">
+                <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email</label>
+                    <label for="floatingInput">Endereço de email</label>
                   </div>
                   <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Senha</label>
                   </div>
+              
+                  <div class="checkbox mb-3">
+                    <label>
+                      <input type="checkbox" value="remember-me">Lembrar
+                    </label>
+                  </div>
+                  <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+            
+            
                 
             </fieldset>
         </form>
